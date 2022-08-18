@@ -1,7 +1,10 @@
 import os
 import subprocess
 import re
-from command_runner.elevate import elevate
+from elevate import elevate
+#from command_runner.elevate import elevate
+
+elevate()
 
 def escanear_redes_proximas():
     os.system('cmd /c "netsh wlan show networks"')
@@ -26,5 +29,5 @@ def estado_conexao_wifi():
     estado = re.findall(padraoRegex, output)
     return estado[0]
 
-elevate(desabilitar_adaptador('Ethernet 100'))
+habilitar_adaptador('Ethernet 100')
 print('fdfd')

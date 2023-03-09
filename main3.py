@@ -1,8 +1,7 @@
 import os
-from elevate import elevate
-import time
+import subprocess
 
-elevate()
-os.system('cmd /c "netsh interface set interface "Ethernet 100" disable"')
-time.sleep(5)
-os.system('cmd /c "netsh interface set interface "Ethernet 100" enable"')
+os.startfile(r'C:\Onedrives\OneDrive - abc\Programas\PortableApps\uTorrentPortable\uTorrentPortable.exe')
+#subprocess.call('notepad', shell=True) 
+#os.startfile('notepad')
+print('teste')

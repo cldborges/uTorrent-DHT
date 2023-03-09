@@ -1,13 +1,19 @@
 import os
 import subprocess
 import re
-from command_runner.elevate import elevate
+#from elevate import elevate
+#from command_runner.elevate import elevate
+
+#elevate()
 
 def escanear_redes_proximas():
     os.system('cmd /c "netsh wlan show networks"')
 
 def conectar_rede_salva(rede):
     os.system(f'''cmd /c "netsh wlan connect name="{rede}""''')
+
+def desconectar_wifi():
+    os.system(f'''cmd /c "netsh wlan disconnect''')
 
 def descobrir_adaptadores():
     os.system('cmd /c "netsh interface show interface"')
@@ -24,7 +30,13 @@ def estado_conexao_wifi():
     output = str(subprocess.check_output('cmd /c "netsh wlan show interfaces"', shell=True))
     padraoRegex = r'Estado *: (.*?)\\r\\n'
     estado = re.findall(padraoRegex, output)
+    # print(estado[0])
     return estado[0]
 
-elevate(desabilitar_adaptador('Ethernet 100'))
-print('fdfd')
+def abrir_programa():
+    os.system(r'"C:\Onedrives\OneDrive - abc\Programas\PortableApps\uTorrentPortable\uTorrentPortable.exe"')
+
+# desconectar_wifi()
+# print('fdfd')
+
+estado_conexao_wifi()

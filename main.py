@@ -20,7 +20,7 @@ while estado != 'Conectado' and contador < 20:
     print(estado)
     contador += 1
 
-if contador >= 10:
+if contador >= 20:
     pass
 else:
     desabilitar_adaptador(adaptador)

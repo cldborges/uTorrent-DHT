@@ -1,7 +1,7 @@
 import os
 import subprocess
 import re
-#from elevate import elevate
+# from elevate import elevate
 #from command_runner.elevate import elevate
 
 #elevate()
@@ -23,7 +23,7 @@ def habilitar_adaptador(adaptador):
     os.system(f'cmd /c "netsh interface set interface "{adaptador}" enable"')
 
 def desabilitar_adaptador(adaptador):
- #   elevate()
+    # elevate()
     os.system(f'cmd /c "netsh interface set interface "{adaptador}" disable"')
 
 def estado_conexao_wifi():
@@ -39,4 +39,6 @@ def abrir_programa():
 # desconectar_wifi()
 # print('fdfd')
 
-estado_conexao_wifi()
+# conectar_rede_salva('POCO X3 NFC')
+# descobrir_adaptadores()
+# desabilitar_adaptador('Ethernet')
